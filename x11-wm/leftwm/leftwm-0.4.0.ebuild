@@ -1,7 +1,7 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Copied this from https://gpo.zugaina.org/x11-wm/leftwm/
+# Copied this from https://gpo.zugaina.org/x11-wm/leftwm/ and modified to accept rust-bin and changed MSRV to 1.60
 
 EAPI=8
 
