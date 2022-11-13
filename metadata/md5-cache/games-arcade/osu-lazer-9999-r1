@@ -1,0 +1,14 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst postrm setup unpack
+DEPEND=media-video/ffmpeg virtual/opengl media-libs/libsdl2 x11-misc/shared-mime-info virtual/dotnet-sdk:6.0
+DESCRIPTION=rhythm is just a *click* away!
+EAPI=7
+HOMEPAGE=https://github.com/ppy/osu
+INHERIT=desktop xdg-utils git-r3
+LICENSE=MIT CC-BY-NC-4.0
+PROPERTIES=live
+RDEPEND=media-video/ffmpeg virtual/opengl media-libs/libsdl2 x11-misc/shared-mime-info virtual/dotnet-sdk:6.0
+RESTRICT=test
+SLOT=0
+_eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	xdg-utils	ac0e315a3688929e34ac75b139e7349a	git-r3	2347f8fe2d392b2a091191f94be37e6f
+_md5_=ac42466026be342a060903201cb9ab9e

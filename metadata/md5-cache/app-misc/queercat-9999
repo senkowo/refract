@@ -1,0 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=A version of lolcat with options for some lgbtq+ flags.
+EAPI=8
+HOMEPAGE=https://github.com/Elsa002/queercat
+INHERIT=git-r3
+KEYWORDS=~amd64
+LICENSE=Unlicense
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
+_md5_=90cdb493958fca049bd67500ffaf5f74
