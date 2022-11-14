@@ -3,4 +3,4 @@ A gentoo overlay
 
 some packages may not work
 
-i am beginmer 
+i am a noobe
