@@ -1,8 +1,6 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Copied this from https://gpo.zugaina.org/x11-wm/leftwm/ and modified to accept rust-bin and changed MSRV to 1.60
-
 EAPI=8
 
 CRATES="
@@ -169,22 +167,29 @@ LICENSE="
 "
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="systemd"
+IUSE="systemd lefthk syslog"
 
 DEPEND="
 	x11-libs/libXinerama:0=
 	x11-apps/xrandr:0=
 	x11-base/xorg-server:0=
 	|| ( >=dev-lang/rust-1.60.0 >=dev-lang/rust-bin-1.60.0 )
+
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${PV}/0001-Fix-no-default-features-build-failing-905.patch"
+)
 
 QA_FLAGS_IGNORED="usr/bin/.*"
 
 src_compile() {
 	cd leftwm || die
-	use systemd && features="--features=journald"
-	cargo_src_compile ${features}
+	use systemd && features="--features=journald-log"
+	use lefthk && features="--features=lefthk"
+	use syslog && features="--features=sys-log"
+	cargo_src_compile --no-default-features ${features}
 }
 
 src_install() {
@@ -192,15 +197,24 @@ src_install() {
 	make_desktop_entry leftwm.desktop /usr/share/xsessions/
 	cd target/release || die
 	dobin leftwm{,-worker,-state,-check,-command}
+	if use lefthk; then
+		dobin lefthk-worker
+	fi
+}
+
+src_test() {
+	cargo_src_test
 }
 
 pkg_postinst() {
 	xdg_desktop_database_update
+	elog "Config file format moved to .ron"
+	elog "You need update your config file"
+	elog "Try leftwm-check --migrate-toml-to-ron"
+	elog "Or visit"
+	elog "https://github.com/leftwm/leftwm/wiki"
 }
 
 pkg_postrm() {
 	xdg_desktop_database_update
 }
-
-
-
