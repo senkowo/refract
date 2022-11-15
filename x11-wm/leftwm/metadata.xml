@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+	<maintainer type="person">
+		<email>qtwebengine@gmail.com</email>
+		<name>Kai Arntz</name>
+		<description>simply modified the ebuild on GURU to accept rust-bin and moved up minimum rust version from 1.52 to 1.60</description>
+	</maintainer>
+</pkgmetadata>
