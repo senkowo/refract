@@ -4,6 +4,6 @@
 	<maintainer type="person">
 		<email>qtwebengine@gmail.com</email>
 		<name>Kai Arntz</name>
-		<description>simply modified the ebuild on GURU to accept rust-bin and moved up minimum rust version from 1.52 to 1.60</description>
+		<description>stole this ebuild from someone. thank you for creating it. modified it here and there. i don't know what else to put here.</description>
 	</maintainer>
 </pkgmetadata>
