@@ -1,6 +1,9 @@
 # Copyright 2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+### COPIED AND PASTED FROM HERE: 
+### https://gitweb.gentoo.org/repo/proj/guru.git/tree/x11-wm/leftwm/leftwm-0.4.0.ebuild?id=9bdd96cd8735da9843cff48228f47b94fe113f5c
+
 EAPI=8
 
 CRATES="
