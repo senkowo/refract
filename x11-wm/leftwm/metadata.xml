@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
 		<email>qtwebengine@gmail.com</email>
-		<name>Ai Arntz</name>
-		<description>borrowing someone's ebuild. modified it here and there. i don't know what else to put here. hi.</description>
+		<name>Artemis</name>
+		<description>Borrowing Luciano Degni's ebuild (degni.public@gmail.com)</description>
 	</maintainer>
+	<upstream>
+		<doc>https://github.com/leftwm/leftwm/wiki/Config</doc>
+		<bugs-to>https://github.com/leftwm/leftwm/issues</bugs-to>
+	</upstream>
+	<use>
+		<flag name="lefthk">Use LeftHK hotkey daemon</flag>
+	</use>
 </pkgmetadata>
+
+
